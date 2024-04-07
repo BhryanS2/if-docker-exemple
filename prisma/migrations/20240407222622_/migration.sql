@@ -4,6 +4,6 @@ CREATE TABLE "Task" (
     "title" TEXT NOT NULL,
     "description" TEXT,
     "status" TEXT NOT NULL,
-    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+    "createdAt" timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );

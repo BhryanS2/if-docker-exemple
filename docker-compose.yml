@@ -25,6 +25,11 @@ services:
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
       - API_BASE_URL=http://localhost:8080
+    entrypoint: [
+      "sh",
+      "-c",
+      "npx prisma migrate deploy && npm run start"
+    ]
     depends_on:
       - postgres
     networks:

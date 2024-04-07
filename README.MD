@@ -61,6 +61,15 @@ curl http://localhost:8080/task/1
 ```sh
 curl -X PUT http://localhost:8080/task/1 -H "Content-Type: application/json" -d '{"title": "Tarefa 1", "description": "Descrição da tarefa 1", "status": "concluída"}'
 ```
+- Deleta uma tarefa
+
+```sh
+# DELETE http://localhost:8080/task/:id
+```
+
+```sh
+curl -X DELETE http://localhost:8080/task/1
+```
 
 ## Como rodar? (Sem docker)
 
