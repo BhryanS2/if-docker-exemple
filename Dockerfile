@@ -8,6 +8,8 @@ COPY package.json package-lock.json ./
 
 RUN npm install
 
+# ----------------------------------------------------------------
+
 FROM base AS build
 
 WORKDIR /usr/src/app
@@ -17,6 +19,8 @@ COPY --from=dependencies /usr/src/app/node_modules ./node_modules
 
 RUN npm run build
 RUN npm prune --prod
+
+# ----------------------------------------------------------------
 
 FROM node:20-alpine3.19 AS deploy
 
